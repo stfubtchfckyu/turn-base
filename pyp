@@ -201,9 +201,12 @@ with col2:
     st.markdown("**Event Log (latest 10):**")
     for line in state["log"][-10:][::-1]:
         st.write("- " + line)
-
 # Check for endgame
 if state["player"]["hp"] <= 0:
     st.error("Kamu kalah. Player HP = 0")
 if state["enemy"]["hp"] <= 0:
     st.success("Kamu menang! Enemy HP = 0")
+#requirements.txt 
+streamlit>=1.10
+Pillow>=9.0
+numpy>=1.23
